@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Travaux, conseils et aides financières : Hellio s'occupe de tout pour améliorer votre confort et baisser durablement vos factures d'énergie.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaQuery.css">
+    <title>Hellio</title>
+</head>
+
+<body>
+    <header class="header">
+        <img class="logo" src="./images/logo.png" alt="logo du site" style="object-fit: contain">
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="list"><a href="#"> Isolation </a></li>
+                <li class="list"><a href="#"> Chauffage </a></li>
+                <li class="list"><a href="#"> Rénovation globale </a> </li>
+                <li class="list"><a href="#"> Panneaux solaires </a> </li>
+                <li class="list"><a href="#"> Audit énergétique </a> </li>
+                <li class="list"><a href="#"> Prime énergie </a></li>
+            </ul>
+            <div class="nav-menu-responsive" onclick="openNav()">
+                <img src="./images/nav-menu.png" alt="icon menu">
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contentSection">
+
+            <div class="leftSideSection">
+                <h1>Rénovez, valorisez,<br> économisez</h1>
+                <h2 class="description">La forêt s'associe avec Hellio et ses experts en rénovation énergétique, vos
+                    projets deviennent
+                    faciles à réaliser !</h2>
+                <div class="service">
+                    <div> <span class="icon">⎷</span>
+                        <p>Travaux pris en charge jusqu'à 90 % </p>
+                    </div>
+                    <div> <span class="icon">⎷</span>
+                        <p> Moins de dépenses, plus de confort </p>
+                    </div>
+                </div>
+
+                <div class="buttons">
+                    <div>
+
+                        <button class="dropDownButton" onclick="dropDown()">Je suis un professionnel
+                            <img class="dropDownIcon" src="./images/chevron.svg"></img>
+                        </button>
+
+                        <ul class="dropDownList">
+                            <li class="dropDownContent firstContent"> <a href="#"> Un agent </a> </li>
+                            <li class="dropDownContent secondContent"> <a href="#"> Un gestionnaire de bien </a> </li>
+                        </ul>
+                    </div>
+
+                    <div id="particulierLink">
+                        <a class="particulierLink" href="#">Je suis un particulier → </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="rightSideSection">
+                <img src="./images/cover.png" alt="une famille heureuse">
+                <p>Accompagnement gratuit et sans engagement par <span class="logoHellio">hellio</span> </p>
+            </div>
+
+        </section>
+    </main>
+
+
+    <!-- Change website color dark / white mode  -->
+    <div class="darkWhiteMode">
+
+        <img onclick="darkAndWhiteMode()" class="changeMode whiteMode " src="./images/sun.png" alt="white mode"
+            title="changer le mode du site">
+
+        <img onclick="darkAndWhiteMode()" class=" changeMode darkMode" src="./images/moon.png" alt="dark mode"
+            title="changer le mode du site">
+
+    </div>
+
+</body>
+<script src="./index.js"></script>
+
+</html>

@@ -1,0 +1,305 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 40px 60px;
+}
+
+.darkBody {
+    background-color: #000000f0;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.nav-list {
+    display: flex;
+    /* justify-content: space-between; */
+}
+
+.list {
+    padding: 20px;
+}
+
+.list a {
+    font-size: 15px;
+    color: #7F7F7F;
+}
+
+/******** NAV Responsive icon **********/
+
+.nav-menu-responsive {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 40px;
+    background: #ffffff;
+    padding: 5px 5px 1px 5px;
+}
+
+
+/*** section 1 ***/
+.contentSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 45px;
+}
+
+/* left side section */
+
+h1 {
+    font-size: 50px;
+    color: #013C84;
+    animation: slideRight 1.7s ease forwards;
+}
+
+/*la couleur du h1 dans le dark mode*/
+.secondColorOfTitle {
+    color: #0d9ad5;
+}
+
+.description {
+    color: #7F7F7F;
+    width: 500px;
+    font-size: 19px;
+    font-weight: 100;
+    margin-top: 8px;
+    animation: slideRight 1.7s ease forwards;
+    animation-delay: 500ms;
+    opacity: 0;
+
+}
+
+.service {
+    display: flex;
+    width: 360px;
+    margin-top: 30px;
+    animation: slideRight 1.7s ease forwards;
+    animation-delay: 1s;
+    opacity: 0;
+}
+
+.service p {
+    color: #099BD6;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.icon {
+    padding: 6px 10px;
+    margin-right: 8px;
+    background-color: #099BD6;
+    border-radius: 25px;
+    color: #fff;
+    float: left;
+}
+
+/** buttons **/
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 550px;
+    margin-top: 40px;
+    opacity: 0;
+    animation: showButtons 2s ease forwards;
+    animation-delay: 1.8s;
+
+}
+
+@keyframes showButtons {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.dropDownButton {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-weight: bold;
+    font-size: 17px;
+    padding: 9px 15px;
+    background-color: #FF5280;
+    border-radius: 25px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+
+}
+
+.dropDownButton:hover {
+    background-color: #ff2c64;
+}
+
+.selected {
+    background-color: #ff2c64;
+}
+
+.dropDownList {
+    width: 288px;
+    visibility: hidden;
+    transform: translateY(-50px);
+    transition: 300ms;
+    opacity: 0;
+}
+
+.showDropDownList {
+    visibility: visible;
+    transform: translateY(0px);
+    opacity: 1;
+    transform: translateY(-20px);
+
+}
+
+.dropDownContent {
+    padding: 5px 10px;
+    border: 2px solid #EDE9E6;
+}
+
+.dropDownContent:hover {
+    background-color: #EDE9E6;
+}
+
+.dropDownContent a {
+    color: #013C84;
+    font-weight: bold;
+}
+
+.firstContent {
+    padding-top: 22px;
+}
+
+.secondContent {
+    border-radius: 0 0 15px 15px;
+    border-top: none;
+}
+
+.dropDownIcon {
+    padding-left: 35px;
+    transition: 200ms;
+}
+
+/** en click, cette class vas étre ajouté, et en deuxiéme clique, elle se supprime **/
+.onClickDropDownIcon {
+    transform: rotateX(180deg);
+}
+
+/* Je suis un particulier */
+#particulierLink {
+    margin-top: 11px;
+    margin-bottom: 30px;
+}
+
+.particulierLink {
+    color: #013C84;
+    font-size: 17px;
+    padding: 9px 15px;
+    border: 2px solid #EDE9E6;
+    border-radius: 25px;
+    background-color: #fff;
+    font-weight: bold;
+    transition: 200ms;
+}
+
+.particulierLink:hover {
+    background-color: #013C84;
+    color: #fff;
+}
+
+/* right side section */
+.rightSideSection {
+    /* transition: 500ms; */
+    animation: slideLeft 2s ease forwards;
+}
+
+.rightSideSection p {
+    font-size: 14px;
+    margin-top: 20px;
+    text-align: end;
+}
+
+.changingColor {
+    color: #fff !important;
+}
+
+.logoHellio {
+    font-size: 18px;
+    color: #099BD6;
+    font-weight: bold;
+}
+
+/** dark and white mode website **/
+
+.changeMode {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background: #fff;
+    padding: 7px;
+    border-radius: 25px;
+    border: 1px solid black;
+    cursor: pointer;
+    transition: 200ms;
+}
+
+.changeMode:hover {
+    transform: scale(1.07);
+}
+
+.whiteMode,
+.moon {
+    display: none;
+}
+
+.sun {
+    display: block;
+}
+
+/*********** Animation à l'arrivé sur la page ************/
+@keyframes slideLeft {
+    0% {
+        transform: translateX(350px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-470px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
